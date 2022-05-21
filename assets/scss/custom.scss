@@ -1,0 +1,46 @@
+@import '~/node_modules/bootstrap/scss/bootstrap.scss';
+
+$theme-colors: (
+  //custom-color-deep-purple
+  'cc-deep-purple-50': #EDE7F6,
+  'cc-deep-purple-100': #D1C4E9,
+  'cc-deep-purple-200': #B39DDB,
+  'cc-deep-purple-300': #9575CD,
+  'cc-deep-purple-400': #7E57C2,
+  'cc-deep-purple-500': #673AB7,
+  'cc-deep-purple-600': #5E35B1,
+  'cc-deep-purple-700': #512DA8,
+  'cc-deep-purple-800': #4527A0,
+  'cc-deep-purple-900': #311B92,
+
+  'cc-deep-purple-A100': #B388FF,
+  'cc-deep-purple-A200': #7C4DFF,
+  'cc-deep-purple-A400': #651FFF,
+  'cc-deep-purple-A700': #6200EA,
+
+  //custom-color-teal
+  'cc-teal-A100': #A7ffEB,
+  'cc-teal-A200': #64FFDA,
+  'cc-teal-A400': #1DE9B6,
+  'cc-teal-A700': #00BFA5,
+
+  //custom-color-grey
+  'cc-grey-50': #FAFAFA,
+  'cc-grey-100': #F5F5F5,
+  'cc-grey-200': #EEEEEE,
+  'cc-grey-300': #E0E0E0,
+  'cc-grey-400': #BDBDBD,
+  'cc-grey-500': #9E9E9E,
+  'cc-grey-600': #757575,
+  'cc-grey-700': #616161,
+  'cc-grey-800': #424242,
+  'cc-grey-900': #212121,    
+);
+
+a{
+    color: #7C4DFF
+};
+
+.bg-body{
+    color: black
+};
