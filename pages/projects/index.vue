@@ -9,7 +9,7 @@
       </h3>
 
       <div class="row mb-2">
-        <ProjectsPreview :posts="posts"/>
+        <ProjectsPreview :posts="posts" :paginatedFetch="paginatedFetch"/>
             
       </div>
     </main>
@@ -25,7 +25,7 @@ import Footer from "../../components/viewsComponents/layout/Footer.vue"
 
 import ProjectsPreview  from "../../components/viewsComponents/ProjectsPreview.vue"
 
-import Config from "../../config/config.js"
+import bucket from "../../config/config.js"
 
 export default {
   name: 'ProjectsView',
@@ -37,15 +37,25 @@ export default {
  data: () => ({
     posts: {}
   }),
-  
+
+  methods:{
+    async paginatedFetch(page){
+      const query = {
+        query: {
+          type: 'posts', "metadata.category":{$in:["projects"]}
+        },
+        limit: 12,
+        skip: page*12, 
+        sort: "-created_at",
+        props: 'slug,title,content,metadata.previewimg.url,metadata.description,metadata.category,metadata.publicationdate'
+      }
+    this.posts=await bucket.getObjects(query).then(response => response)
+    },
+  },
+
   async fetch(){
-    fetch( Config.url + Config.query_base + Config.read_key + 
-          '&props=slug,title,content,metadata.previewimg.url,metadata.description,metadata.category,metadata.publicationdate')
-          .then(response => response.json())
-          .then(data => {
-          //console.log(blogs);
-          this.posts= data
-      });
+    this.paginatedFetch(0)
+
   },
   fetchOnServer: false
 }

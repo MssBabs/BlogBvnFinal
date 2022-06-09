@@ -21,11 +21,12 @@
 
         <b-row align-h="center">
             <b-col cols="auto">
-                <b-pagination 
+                <b-pagination
                 @input="updatePosts"
                 v-model="currentPage"
                 :total-rows="posts.total" 
                 :per-page="posts.limit"
+                align-h="center"
                 class="btn-custom"
                 ></b-pagination>
             </b-col>

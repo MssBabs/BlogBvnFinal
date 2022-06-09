@@ -2,7 +2,7 @@
   <footer>
     <hr>
     <p class="text-center"> - MssBabsBlog - </p>
-    <p class="text-center">©2021 Copyright</p>
+    <p class="text-center">©2022 Copyright</p>
   </footer>
 </template>
 

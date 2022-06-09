@@ -4,10 +4,13 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  
+  router: {
+    middleware:'routes'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'BlogBvnFinal',
+    title: '-- Mss Babs --',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,7 +21,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/robot.png' }
     ]
   },
 
@@ -41,9 +44,15 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    '@nuxtjs/markdownit',
+    'bootstrap-vue/nuxt'
   ],
-
+  markdownit: {
+    runtime: true // Support `$md()`
+  },
+  bootstrapVue: {
+    icons: true
+  },
   module: {
     rules: [
       {

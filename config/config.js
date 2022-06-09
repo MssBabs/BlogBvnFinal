@@ -1,4 +1,4 @@
-const config = {
+/*const config = {
     //Config Cosmic
     bucket_name:      "blogbvn-blog",
     bucket_slug:      "blogbvn-blog",
@@ -9,6 +9,12 @@ const config = {
     read_key:         "&read_key=zWDzAqZUqjPIBB0SkedW72Q5IzFxlEYnNH9o2LpMtWzrgfrQQZ",
     write_key:        "ccIrZuQKTKDg6L5URHulJdcHI70r6cj8oVHAe3sfFyNIvuDh3y",
     url:              "https://api.cosmicjs.com/v2/buckets/blogbvn-blog/objects?pretty=true"
-  }
+  }*/
   
-  export default config;
+  const Cosmic = require('cosmicjs')()
+  const bucket = Cosmic.bucket({
+    slug: 'blogbvn-blog',
+    read_key: 'zWDzAqZUqjPIBB0SkedW72Q5IzFxlEYnNH9o2LpMtWzrgfrQQZ'
+  })
+
+  export default bucket;

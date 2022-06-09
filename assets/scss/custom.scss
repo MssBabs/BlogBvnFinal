@@ -1,7 +1,6 @@
 @import '~/node_modules/bootstrap/scss/bootstrap.scss';
 
-$theme-colors: (
-  //custom-color-deep-purple
+$theme-colors: ( //custom-color-deep-purple
   'cc-deep-purple-50': #EDE7F6,
   'cc-deep-purple-100': #D1C4E9,
   'cc-deep-purple-200': #B39DDB,
@@ -25,7 +24,7 @@ $theme-colors: (
   'cc-teal-A700': #00BFA5,
 
   //custom-color-grey
-  'cc-grey-50': #FAFAFA,
+  'cc-grey-50' : #FAFAFA,
   'cc-grey-100': #F5F5F5,
   'cc-grey-200': #EEEEEE,
   'cc-grey-300': #E0E0E0,
@@ -34,13 +33,96 @@ $theme-colors: (
   'cc-grey-600': #757575,
   'cc-grey-700': #616161,
   'cc-grey-800': #424242,
-  'cc-grey-900': #212121,    
+  'cc-grey-900': #212121,
 );
 
-a{
-    color: #7C4DFF
+a {
+  color: #7C4DFF
 };
 
-.bg-body{
-    color: black
+a:hover {
+  color: #6200EA
 };
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #7C4DFF;
+  border-color: #7C4DFF;
+};
+
+.page-item.active .page-link:hover {
+  color: #fff;
+  background-color: #6200EA;
+  border-color: #6200EA;
+};
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #7C4DFF;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+};
+
+.btn-custom {
+  color: #fff;
+  background-color: #7C4DFF;
+  border-color: #7C4DFF
+};
+
+.btn-custom:hover {
+  color: #fff;
+  background-color: #6200EA;
+  border-color: #6200EA;
+};
+
+.bg-body {
+  color: black
+};
+
+.container-post {
+  background-color: rgba(124, 77, 255, 0.3) !important;
+};
+
+@media (max-width: 575.98px) {
+  #post img {
+    max-width: 12rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #post img {
+    max-width: 20rem;
+
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #post img {
+    max-width: 35rem;
+
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #post img {
+    max-width: 40rem;
+
+  }
+}
+@media (min-width: 1200px) {
+  #post img {
+    max-width: 50rem;
+
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+.blog-header-logo {
+  font-family: 'Monoton', cursive;
+  font-size: 2.5rem;
+  color: #7C4DFF;
+}
